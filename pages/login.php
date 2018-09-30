@@ -3,7 +3,11 @@
 		<head>
   			<meta charset="UTF-8">
   			<title>Email - Login</title>
-  
+  			
+  			<script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+			<script src="../js/login.js" type="text/javascript"></script>
+			<script src="../js/jquery.validate.min.js" type="text/javascript"></script>
+
 			<link rel="stylesheet" href="../css/login.css">
 		
 		</head>
@@ -16,10 +20,16 @@
 		<div class="dadosAcesso">
   		<div class="form">
     		<h2>Acesso ao sistema</h2>
-    		<form action="Login.php" method="POST">
+    		<form id="formLogin" action="Login.php" method="POST">
 
-      			<input type="text" placeholder="Usuário" name="user" id="user" />
-      			<input type="password" placeholder="Senha" name="pass" id="pass" />
+    			<div>
+    				<input type="text" placeholder="Usuário" name="usuario" id="usuario" />
+    				<span></span>
+    			</div>
+    			<div>
+    				<input type="password" placeholder="Senha" name="senha" id="senha" />
+    				<span></span>
+    			</div>
       	
       			<button>Entrar</button>
     		</form>
