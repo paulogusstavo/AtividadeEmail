@@ -75,3 +75,10 @@ body {
 .dadosAcesso button:hover {
   background: #178ab4;
 }
+
+span.invalid {
+  color: #F44336;
+  float: right;
+  margin-top: -17px;
+  font-size: 11px;
+}

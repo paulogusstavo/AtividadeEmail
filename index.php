@@ -1,1 +1,3 @@
-<a href="pages/login.php"><button>LOGIN</button></a>
+<?php require "pages/header.php"; ?>
+
+<h1>Página inicial</h1>
