@@ -1,3 +1,9 @@
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/toastr.js.map"></script>
+<script src="../js/toastr.min.js"></script>
+<script src="../js/login.js"></script>
+<link href="../css/toastr.min.css" rel="stylesheet">
+
 <?php
   
   $auth = true;
@@ -13,6 +19,12 @@
       #Direciona o usuario para a pagina index.php
       header('Location: ../index.php');
     }
+    else {
+      echo ".";
+      echo  '<script>',
+              'exibirToast("error", "Usuário e/ou senha inválidos!");',
+            '</script>';
+    }
   }
 ?>
 
@@ -21,13 +33,10 @@
 		<head>
   			<meta charset="UTF-8">
   			<title>Email - Login</title>
-  			
-  			<script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
-			<script src="../js/login.js" type="text/javascript"></script>
-			<script src="../js/jquery.validate.min.js" type="text/javascript"></script>
+		    
+        <script src="../js/jquery.validate.min.js"></script>
+        <link rel="stylesheet" href="../css/login.css">
 
-			<link rel="stylesheet" href="../css/login.css">
-		
 		</head>
 	<body>	
 		<div class="titulo">
@@ -38,7 +47,7 @@
 		<div class="dadosAcesso">
   		<div class="form">
     		<h2>Acesso ao sistema</h2>
-    		<form id="formLogin" action="login.php" method="POST"> <!--id="formLogin"-->
+    		<form id="formLogin" action="login.php" method="POST">
 
     				<input type="text" placeholder="Usuário" name="usuario" id="usuario" />
     				<span></span>
