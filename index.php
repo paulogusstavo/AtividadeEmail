@@ -10,18 +10,68 @@
 	<script src="js/toastr.min.js"></script>
 	<script src="js/login.js"></script>
 	<link href="css/toastr.min.css" rel="stylesheet">
+	<link href="css/home.css" rel="stylesheet">
 
 </head>
 <body>
 
-	<h1>Página inicial</h1>
+	<table width="100%" cellspacing="0">
+		
+		<tr>
+			<td width="2%"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td width="2%"><input class="campo" type="text" id="Pesquisar" placeholder="Pesquisar" size="30"></td>
+			<td width="70%"></td>
+		</tr>
 
-	<p>Necessário criar HTML desta página. <b style="color: red;">Issue #3</b></p>
+		<tr>
+			<td></td>
+			<td><a href="pages/novaMensagem.php">+ Nova Mensagem</a></td>
+			<td><b>Caixa de Entrada</b></td>
+		</tr>
 
-	<br><br><br>
+		<tr>
+			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="linha">Favoritos</td>
+			<td></td>
+		</tr>
 
-	<h3>CRIAR NOVA MENSAGEM.</h3>
-	<a href="pages/novaMensagem.php"><button>NOVA MENSAGEM</button></a>
+		<tr>
+			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="outraLinha">Caixa de Entrada</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="linha">Lixo eletronico</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="outraLinha">Rascunho</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="linha">Itens Enviados</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="outraLinha">Itens Excluidos</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
+			<td class="linha">Arquivo Morto</td>
+			<td></td>
+		</tr>
+
+	</table>
 
 </body>
 </html>
