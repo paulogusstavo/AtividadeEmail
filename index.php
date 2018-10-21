@@ -15,63 +15,85 @@
 </head>
 <body>
 
-	<table width="100%" cellspacing="0">
-		
-		<tr>
-			<td width="2%"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td width="2%"><input class="campo" type="text" id="Pesquisar" placeholder="Pesquisar" size="30"></td>
-			<td width="70%"></td>
-		</tr>
+	<div class="tableTop">
 
-		<tr>
-			<td></td>
-			<td><a href="pages/novaMensagem.php">+ Nova Mensagem</a></td>
-			<td><b>Caixa de Entrada</b></td>
-		</tr>
+		<table width="100%" cellspacing="0">
+			<tr>
+				<td colspan="2">
+					<img src="images/menu.png">
+					<input class="campo" type="text" id="Pesquisar" placeholder="Pesquisar" size="30">
+				</td>
+			</tr>
+			<tr>
+				<td width="20%" class="centralizar ajuste"><a href="pages/novaMensagem.php">+ Nova Mensagem</a></td>
+				<td class="ajuste"><b><?php echo ucfirst($_GET["pasta"]) ?></b></td>
+			</tr>
+		</table>
 
-		<tr>
-			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="linha">Favoritos</td>
-			<td></td>
-		</tr>
+	</div>
 
-		<tr>
-			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="outraLinha">Caixa de Entrada</td>
-			<td></td>
-		</tr>
+	<div class="tableLeft">
 
-		<tr>
-			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="linha">Lixo eletronico</td>
-			<td></td>
-		</tr>
+		<table width="100%" cellspacing="0">
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td>Favoritos</td>
+			</tr>
 
-		<tr>
-			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="outraLinha">Rascunho</td>
-			<td></td>
-		</tr>
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td id="caixa_entrada">Caixa de Entrada</td>
+			</tr>
 
-		<tr>
-			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="linha">Itens Enviados</td>
-			<td></td>
-		</tr>
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td>Lixo eletrônico</td>
+			</tr>
 
-		<tr>
-			<td class="outraLinha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="outraLinha">Itens Excluidos</td>
-			<td></td>
-		</tr>
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td>Rascunho</td>
+			</tr>
 
-		<tr>
-			<td class="linha"><img src="images/menu.png" width="80%" height="80%"></td>
-			<td class="linha">Arquivo Morto</td>
-			<td></td>
-		</tr>
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td id="enviadas">Itens Enviados</td>
+			</tr>
 
-	</table>
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td id="excluidos">Itens Excluídos</td>
+			</tr>
+
+			<tr>
+				<td><img src="images/menu.png"></td>
+				<td>Arquivo Morto</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="tableRight">
+
+		<table width="100%" cellspacing="0">
+				<?php 
+					$diretorio = "files/mensagens/".$_GET["pasta"]."/";
+					$arquivos = array_diff(scandir($diretorio), array('..', '.', '.DS_Store'));
+
+					foreach ($arquivos as $arquivo) { //Interacao com cada mensagem.
+						$mensagemXML = simplexml_load_file($diretorio.$arquivo);
+						
+						echo "<tr>";
+							echo "<td class='cutText' style='--size: 15%;'><b>$mensagemXML->para</b></td>";
+							echo "<td class='cutText' style='--size: 15%;'><b>Assunto: $mensagemXML->assunto</b></td>";
+							echo "<td class='cutText' style='--size: 60%;'>$mensagemXML->texto</td>";
+						echo "</tr>";
+					}
+
+				?>
+		</table>
+
+	</div>
 
 </body>
 </html>

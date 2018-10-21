@@ -19,7 +19,7 @@ class Usuario {
 		foreach ($usuariosXML->usuario as $user) {
 
 			if (($user->login) == $this->usuario) {
-				$auth = (($user->senha) == md5($this->senha)) ? true : false;
+				$auth = (($user->senha) == md5($this->senha));
 				//break;
 			}
 		}
