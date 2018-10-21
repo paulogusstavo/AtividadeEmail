@@ -1,4 +1,17 @@
 $( document ).ready(function() {
+
+    $( "#caixa_entrada" ).click(function() {
+      window.location.href = window.location.href.replace( /[\?#].*|$/, "?pasta=caixa+de+entrada" );
+    });
+
+    $( "#enviadas" ).click(function() {
+      window.location.href = window.location.href.replace( /[\?#].*|$/, "?pasta=enviadas" );
+    });
+
+    $( "#excluidos" ).click(function() {
+      window.location.href = window.location.href.replace( /[\?#].*|$/, "?pasta=excluidos" );
+    });
+
     $("#formLogin").validate({
         errorElement: 'span',
         errorClass: 'invalid',
@@ -27,6 +40,7 @@ $( document ).ready(function() {
         }
     });
 });
+
 
 // TOAST
 function exibirToast ($tipo, $msg) {

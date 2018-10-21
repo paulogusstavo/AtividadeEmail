@@ -1,0 +1,75 @@
+/* CLASS */
+.campo {
+	border-radius: 2px;
+	padding: 4px;
+	margin: 5px 0px 5px 15px;
+}
+.centralizar {
+	font-size: 13px;
+	text-align: center;
+}
+.ajuste {
+	padding: 12px;
+}
+.tableTop {
+
+}
+.tableLeft {
+	width: 20%;
+	float: left;
+	cursor: pointer;
+}
+.tableRight {
+	width: 80%;
+	float: left;
+	background-color: white;
+}
+.cutText {
+	display: -moz-inline-box;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: var(--size);
+}
+
+/* COMPONENTS */
+.tableLeft table tr:nth-child(2n) {
+	background-color: #e0f1f8; 
+}
+.tableLeft table tr:nth-child(2n+1) {
+	background-color: #d0ecf3;
+}
+.tableTop table tr:nth-child(1) {
+	background-color: #3b91c2;
+}
+.tableRight tr td {
+  border-bottom: 0.5pt solid black;
+  padding: 15px;
+  font-size: 15px;
+}
+.tableTop table tr:nth-child(2) {
+	background-color: #f3f3f3;
+}
+.tableTop img {
+	float: left;
+}
+table tr td{
+	padding: 5px;
+}
+body {
+	margin: 0px;
+	background-color: #f3f3f3;
+}
+a {
+	color: black;
+	text-decoration: none
+}
+input {
+	border:none;
+}
+img {
+	margin-top: 5px;
+	width: 22px;
+	height: 22px;
+}
+

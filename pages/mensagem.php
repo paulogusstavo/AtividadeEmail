@@ -19,7 +19,7 @@ class Mensagem {
 	private function novaMensagem() {
 		$msgXML = xmlwriter_open_memory();
 
-		xmlwriter_set_indent($msgXML, 1);
+		xmlwriter_set_indent($msgXML, 4);
 		xmlwriter_start_document($msgXML, '1.0', 'UTF-8');
 
 		xmlwriter_start_element($msgXML, 'mensagem');
@@ -48,6 +48,12 @@ class Mensagem {
 		$handle = fopen($arquivo, 'w') or die('Erro no arquivo: '.$arquivo);
 		fwrite($handle, xmlwriter_output_memory($msgXML));
 	}
+
+	function lerMensagem ($tipo) {
+		$pasta = "files/mensagens/".$tipo."/";
+		
+	}
+
 
 	// HELPRES
 	private function getDatetimeNow() {

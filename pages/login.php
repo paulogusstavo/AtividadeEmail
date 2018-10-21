@@ -5,11 +5,11 @@
 <link href="../css/toastr.min.css" rel="stylesheet">
 
 <?php
-  
+
   $auth = true;
   if(isset($_POST['usuario']) && isset($_POST['senha'])) {
     
-    require_once"usuario.php";
+    require_once "usuario.php";
 
     $usuario = new Usuario($_POST['usuario'], $_POST['senha']);
     session_start(); 
@@ -17,10 +17,9 @@
 
     if($auth) {
       #Direciona o usuario para a pagina index.php
-      header('Location: ../index.php');
+      header('Location: ../index.php?pasta=caixa+de+entrada');
     }
     else {
-      echo ".";
       echo  '<script>',
               'exibirToast("error", "Usuário e/ou senha inválidos!");',
             '</script>';
