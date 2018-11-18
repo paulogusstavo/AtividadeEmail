@@ -7,9 +7,11 @@
 .centralizar {
 	font-size: 13px;
 	text-align: center;
+	cursor: pointer;
 }
 .ajuste {
 	padding: 12px;
+	font-weight: bold;
 }
 .tableTop {
 
@@ -25,11 +27,11 @@
 	background-color: white;
 }
 .cutText {
-	display: -moz-inline-box;
-	overflow: hidden;
-	white-space: nowrap;
 	text-overflow: ellipsis;
-	width: var(--size);
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	width:var(--size);
 }
 
 /* COMPONENTS */
