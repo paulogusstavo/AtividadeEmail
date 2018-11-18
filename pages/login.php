@@ -17,7 +17,7 @@
 
     if($auth) {
       #Direciona o usuario para a pagina index.php
-      header('Location: ../index.php?pasta=caixa+de+entrada');
+      header('Location: ../index.php');
     }
     else {
       echo  '<script>',

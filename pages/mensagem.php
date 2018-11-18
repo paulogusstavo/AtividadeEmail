@@ -49,12 +49,6 @@ class Mensagem {
 		fwrite($handle, xmlwriter_output_memory($msgXML));
 	}
 
-	function lerMensagem ($tipo) {
-		$pasta = "files/mensagens/".$tipo."/";
-		
-	}
-
-
 	// HELPRES
 	private function getDatetimeNow() {
 	    $dateZone = new DateTimeZone('Brazil/East');
