@@ -65,7 +65,7 @@ function mostrarDados($URL){
 
       for(var i = 0; i < retorno.length; i++){
 
-        html += "<tr>";
+        html += "<tr id='paulo'>";
         html += "<td class='cutText' style='--size: 15%;'><b>"+retorno[i]["para"]+"</b></td>";
         html += "<td class='cutText' style='--size: 15%;'><b>Assunto: "+retorno[i]["assunto"]+"</b></td>";
         html += "<td class='cutText' style='--size: 60%;'>"+retorno[i]["texto"]+"</td>";
@@ -124,6 +124,40 @@ function exibirToast ($tipo, $msg) {
       "hideMethod": "fadeOut"
     }
     toastr[$tipo]($msg, "Paulo's Email")
+}
+
+function pesquisar () {
+
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("pesquisar");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tabelaMensagens");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            }
+            else {
+              td = tr[i].getElementsByTagName("td")[2];
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              }
+              else {
+                  tr[i].style.display = "none";
+              }
+            }
+        }
+      } 
+    }
+
+
 }
 
 

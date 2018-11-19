@@ -36,7 +36,8 @@
 			<tr>
 				<td colspan="2">
 					<img src="images/menu.png">
-					<input class="campo" type="text" id="Pesquisar" placeholder="Pesquisar" size="30">
+					<input class="campo" type="text" id="pesquisar" 
+					placeholder="Pesquisar" size="30" onkeyup="pesquisar()">
 				</td>
 			</tr>
 			<tr>
