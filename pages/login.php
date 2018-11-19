@@ -1,7 +1,7 @@
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/toastr.js.map"></script>
 <script src="../js/toastr.min.js"></script>
-<script src="../js/login.js"></script>
+<script src="../js/functions.js"></script>
 <link href="../css/toastr.min.css" rel="stylesheet">
 
 <?php
@@ -20,7 +20,7 @@
       header('Location: ../index.php');
     }
     else {
-      echo  '<script>',
+       echo '.<script>',
               'exibirToast("error", "Usuário e/ou senha inválidos!");',
             '</script>';
     }

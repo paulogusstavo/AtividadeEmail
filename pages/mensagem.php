@@ -44,8 +44,8 @@ class Mensagem {
 
 		xmlwriter_end_document($msgXML);
 
-		$arquivo = "files/mensagens/enviadas/".$this->getDatetimeNow().".xml";
-		$handle = fopen($arquivo, 'w') or die('Erro no arquivo: '.$arquivo);
+		$arquivo = "../files/mensagens/enviadas/".$this->getDatetimeNow().".xml";
+		$handle = fopen($arquivo, 'w') or die ('Erro no arquivo: '.$arquivo);
 		fwrite($handle, xmlwriter_output_memory($msgXML));
 	}
 

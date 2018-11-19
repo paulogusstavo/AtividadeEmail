@@ -55,6 +55,35 @@
 .tableTop img {
 	float: left;
 }
+.newBotao{
+	border: none;
+	padding: 10px;
+	font-family: arial;
+	border-radius: 5px;
+	border: solid 1px #CCC;
+	width: 100px;
+
+}
+.newMensagem{
+	border: none;
+	font-family: arial;
+	border-radius: 5px;
+	border: solid 1px #CCC;
+	padding: 5px;
+	width: auto;
+}
+
+.assuntos{
+	border: none;
+	font-family: arial;
+	border-radius: 5px;
+	border: solid 1px #CCC;
+	padding: 5px;
+}
+
+.newTabela tr td {
+	border-bottom: none;
+}
 table tr td{
 	padding: 5px;
 }
