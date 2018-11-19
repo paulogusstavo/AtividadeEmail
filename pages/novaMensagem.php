@@ -1,34 +1,48 @@
-<?php require_once "header.php"; ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nova Mensagem</title>
-	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="../js/functions.js" type="text/javascript"></script>
 
 </head>
 <body>
 
-	<h1>Necessario HTML desta pagina</h1>
-	<h1>Necessario verificacao de campos na pagina</h1>
-	<p>Inclusao de mensagem <b>funcionando</b>.</p>
+		<table class="newTabela" cellspacing="10">	
+			<tr>
+				<td colspan="2">
+					<button class="newMensagem" tabindex="-1">Para</button>  <input class="assuntos" type="text" id="para" size="128">
+				</td>
+			</tr>
 
-	<form id="formMensagem" action="../index.php" method="POST">
-		<span>para:</span>
-		<input type="text" name="para" id="para" /> <br>
+			<tr>
+				<td colspan="2">
+					<button class="newMensagem" tabindex="-1">Cc</button>  <input class="assuntos" type="text" id="cc" size="130">
+				</td>
+			</tr>
 
-		<span>cc:</span>
-		<input type="text" name="cc" id="cc" /><br>
+			<tr>
+				<td colspan="2">
+					<button class="newMensagem" tabindex="-1">Assunto</button> <input class="assuntos" type="text" id="assunto" size="125">
+				</td>
+			</tr>
 
-		<span>assunto:</span>
-		<input type="text" name="assunto" id="assunto" /><br>
+			<tr>
+				<td colspan="2">
+					<textarea class="assuntos" rows="10" cols="92" maxlength="200" placeholder="Adicione uma mensagem" id="conteudo"></textarea>
+				</td>
+			</tr>
 
-		<span>conteudo:</span>
-		<input type="text" name="conteudo" id="conteudo" /><br>
+			<tr>
+				<td>
+					<button id="criarNovaMensagem" class="newBotao" onclick="criarNovaMensagem()">Enviar</button>
+				</td>
+				<td>
+					<button class="newBotao">Anexar</button> <button class="newBotao">Descartar</button>
+				</td>
+			</tr>
 
-		<button type="submit">Enviar</button>
-	</form>
-
+		</table>
 
 </body>
 </html>
